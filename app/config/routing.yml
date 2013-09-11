@@ -1,0 +1,15 @@
+challenge:
+    resource: "@ChallengeBundle/Resources/config/routing.yml"
+    prefix:   /
+
+product_list:
+    pattern: /productList
+    defaults: { _controller: ChallengeBundle:ProductList:productList }
+
+paginate_result:
+    pattern: /paginate
+    defaults:  { _controller: ChallengeBundle:Grid:paginate }
+
+sort_result:
+    pattern: /sortResults
+    defaults:  { _controller: ChallengeBundle:Grid:sort }

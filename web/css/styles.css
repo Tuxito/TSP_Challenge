@@ -1,0 +1,20 @@
+.select_record_size {
+    width: 60px;
+}
+
+.negative_profit {
+    color: #d14;
+}
+
+a:hover {
+    cursor:pointer;
+}
+
+th:hover {
+    cursor:pointer;
+}
+
+.dp-highlight .ui-state-default {
+    background: #484;
+    color: #FFF;
+}
