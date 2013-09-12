@@ -48,9 +48,7 @@ class ProductListController extends Controller{
         $data = Util::getProductList($idCountry, $em, $startDate, $endDate,0,$maxResultsPerPage);
 
         if (!$data['results']) {
-            throw $this->createNotFoundException(
-                'No se ha encontrado precio para el país y el producto solicitado'
-            );
+            return $this->render('ChallengeBundle:Default:noProducts.html.twig');
         }
 
         $totalPages = Util::calculatePages(count($data['totalRecords']),$maxResultsPerPage);

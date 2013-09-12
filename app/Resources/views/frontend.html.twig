@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+
+        <!-- Bootstrap -->
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}">
+
+        {% block includeHead%}{% endblock %}
+
+        <style>
+            body {
+                padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+            }
+        </style>
+    </head>
+<body>
+
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{ asset('js/jquery.js') }}"><\/script>')</script>
+
+    <script src="{{ asset('js/bootstrap.js') }}"></script>
+    <script src="{{ asset('js/functions.js') }}"></script>
+
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="{{ path('product_list') }}">Product List</a>
+
+                <div class="nav-collapse collapse">
+                    <ul class="nav pull-right">
+                        <li><a href="#about" role="button" data-toggle="modal">About</a></li>
+                        <li><a href="#contact" role="button" data-toggle="modal">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- About -->
+    <div id="about" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">About...</h3>
+        </div>
+        <div class="modal-body">
+            <p>TSP Challenge for IT TALENT SEARCH 2013</p><br/>
+            <p>Project made using Symfony 2.3, Twitter bootstrap, Doctrine2 and Jquery</p><br/>
+        </div>
+        <div class="modal-footer">
+            <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+        </div>
+    </div>
+
+
+    <!-- Contact -->
+    <div id="contact" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+            <h3 id="myModalLabel">Contact</h3>
+        </div>
+        <div class="modal-body">
+            <p>
+              <img src="{{  asset('img/tuxito.jpg')  }}" class="img-polaroid">
+
+              <h5>Alfredo León Fernández</h5>
+            </p>
+
+            <p>
+                {# Linkedin button #}
+                <script src="//platform.linkedin.com/in.js" type="text/javascript">
+                    lang: en_US
+                </script>
+                <script type="IN/FollowCompany" data-id="1233516" data-counter="none"></script>
+
+                {# Twitter button #}
+                <a href="https://twitter.com/tux9R" class="twitter-follow-button" data-show-count="false" data-lang="es">Seguir a @tux9R</a>
+                <script>!function(d,s,id){
+                        var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+                        if(!d.getElementById(id)){
+                            js=d.createElement(s);
+                            js.id=id;
+                            js.src=p+'://platform.twitter.com/widgets.js';
+                            fjs.parentNode.insertBefore(js,fjs);
+                        }
+                    }(document, 'script', 'twitter-wjs');
+                </script>
+
+                {# G+ button#}
+                <div class="g-follow" data-annotation="none" data-height="20" data-href="//plus.google.com/112029480863004323510" data-rel="author"></div>
+
+                <script type="text/javascript">
+                    (function() {
+                        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                        po.src = 'https://apis.google.com/js/plusone.js';
+                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                    })();
+                </script>
+            </p>
+        </div>
+
+        <div class="modal-footer">
+           <button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+         </div>
+    </div>
+
+    {% block bodyBlock%}{% endblock %}
+
+</body>
+</html>
+
+

@@ -40,11 +40,18 @@ class GridController extends Controller{
         // get the product list
         $data = Util::getProductList($idCountry, $em, $startDate, $endDate,$firstRecord,$maxResults);
 
+        if (!$data['results']) {
+            return $this->render('ChallengeBundle:Default:noProducts.html.twig');
+        }
+
         // calculate total pages and grid data
         $totalPages = Util::calculatePages(count($data['totalRecords']),$maxResults);
         $grid = array('currentPage' => $nextPage,
                       'totalPages' =>  $totalPages,
                       'totalRecords' => count($data['totalRecords']));
+
+
+
 
         $response = array('gridPaginationData' => $grid,
             'buy' => $data['results'],
