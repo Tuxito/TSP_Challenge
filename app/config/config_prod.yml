@@ -12,7 +12,7 @@ imports:
 #        query_cache_driver: apc
 
 monolog:
-    handlers:
+   handlers:
         main:
             type:         fingers_crossed
             action_level: error

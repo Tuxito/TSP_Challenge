@@ -11,7 +11,7 @@ namespace TSP\ChallengeBundle\Entity;
 
 use Doctrine\ORM\EntityRepository;
 
-class BuyRepository extends EntityRepository {
+class SoldRepository extends EntityRepository {
 
     public function findAllByDateRange($dateIni, $dateEnd){
         $em = $this->getEntityManager();
@@ -32,8 +32,4 @@ class BuyRepository extends EntityRepository {
         return $consulta->getResult();
     }
 
-
-    public function findByCountry($country){
-
-    }
 }

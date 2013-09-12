@@ -103,9 +103,4 @@ class BuyRepository extends EntityRepository {
 
         return $consulta->getResult();
     }
-
-
-    public function findByCountry($country){
-
-    }
 }
