@@ -78,16 +78,20 @@ function gotoPage(pageNumber){
             order:$("#order").val()},
 
         function(response){
-            var datesHtml = response.startDate + " - " + response.endDate;
-            $("#dates").html(datesHtml);
+            if (response.gridPaginationData.totalRecords == 0){
+                alert('No data found for selected country/dates');
+            } else{
+                var datesHtml = response.startDate + " - " + response.endDate;
+                $("#dates").html(datesHtml);
 
-            // repaint the table
-            repaintTable(response);
+                // repaint the table
+                repaintTable(response);
 
-            // repaint the paginator
-            repaintPaginator(response.gridPaginationData.currentPage,
-                response.gridPaginationData.totalPages,
-                response.gridPaginationData.totalRecords);
+                // repaint the paginator
+                repaintPaginator(response.gridPaginationData.currentPage,
+                    response.gridPaginationData.totalPages,
+                    response.gridPaginationData.totalRecords);
+            }
         }, "json");
 }
 

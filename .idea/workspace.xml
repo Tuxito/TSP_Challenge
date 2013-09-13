@@ -17,13 +17,13 @@
     <file path="/productList.html.twig" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1379062098348" ignored="false" />
     <file path="/BuyRepository.php" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1379054460347" ignored="false" />
     <file path="/SoldRepository.php" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1378898181891" ignored="false" />
-    <file path="/functions.js" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1379060093973" ignored="false" />
+    <file path="/functions.js" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1379064677179" ignored="false" />
     <file path="/AjaxController.php" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1378376241728" ignored="false" />
     <file path="/SelectCountryController.php" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1378376811946" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/sensio/generator-bundle/Sensio/Bundle/GeneratorBundle/Tests/Generator/BundleGeneratorTest.php" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1378377353867" ignored="false" />
     <file path="/ProductListController.php" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1378887711086" ignored="false" />
     <file path="$PROJECT_DIR$/app/cache/dev/twig/4a/a0/900bb164b74c9b0adca0ceba8399.php" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1379059979808" ignored="false" />
-    <file path="/GridController.php" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1378980718412" ignored="false" />
+    <file path="/GridController.php" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1379064531723" ignored="false" />
     <file path="/Util.php" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1378979152962" ignored="false" />
     <file path="/composer.json" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1378447612240" ignored="false" />
     <file path="/style.css" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1378463464911" ignored="false" />
@@ -65,10 +65,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="frontend.html.twig" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GridController.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TSP/ChallengeBundle/Controller/GridController.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="54" column="11" selection-start="1735" selection-end="1735" vertical-scroll-proportion="-16.384615">
+              <folding>
+                <marker date="1379064711647" expanded="true" signature="1684:1732" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="frontend.html.twig" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/Resources/views/frontend.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="33" selection-start="2916" selection-end="2916" vertical-scroll-proportion="0.27744982">
+            <state line="71" column="33" selection-start="2916" selection-end="2916" vertical-scroll-proportion="-9.038462">
               <folding />
             </state>
           </provider>
@@ -83,12 +94,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="functions.js" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="functions.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/js/functions.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="147" column="25" selection-start="4528" selection-end="4528" vertical-scroll-proportion="0.0">
+            <state line="82" column="19" selection-start="2712" selection-end="2712" vertical-scroll-proportion="0.5051546">
               <folding>
-                <element signature="n#!!block;n#setupCalendar#0" expanded="false" />
                 <element signature="n#!!block;n#sort#0" expanded="false" />
               </folding>
             </state>
@@ -110,17 +120,17 @@
         <option value="$PROJECT_DIR$/app/cache/prod/appProdProjectContainer.php" />
         <option value="$PROJECT_DIR$/src/TSP/ChallengeBundle/Resources/views/Default/noProducts.html.twig" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/src/TSP/ChallengeBundle/Controller/GridController.php" />
         <option value="$PROJECT_DIR$/src/TSP/ChallengeBundle/Controller/ProductListController.php" />
         <option value="$PROJECT_DIR$/src/TSP/ChallengeBundle/Entity/BuyRepository.php" />
         <option value="$PROJECT_DIR$/src/TSP/ChallengeBundle/Util/Util.php" />
         <option value="$PROJECT_DIR$/src/TSP/ChallengeBundle/Entity/Sale.php" />
         <option value="$PROJECT_DIR$/src/TSP/ChallengeBundle/Entity/SaleRepository.php" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
-        <option value="$PROJECT_DIR$/web/js/functions.js" />
         <option value="$PROJECT_DIR$/web/css/styles.css" />
         <option value="$PROJECT_DIR$/src/TSP/ChallengeBundle/Resources/views/Default/productList.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/frontend.html.twig" />
+        <option value="$PROJECT_DIR$/src/TSP/ChallengeBundle/Controller/GridController.php" />
+        <option value="$PROJECT_DIR$/web/js/functions.js" />
       </list>
     </option>
   </component>
@@ -538,7 +548,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -656,15 +666,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TSP/ChallengeBundle/Controller/GridController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="49" column="36" selection-start="1541" selection-end="1555" vertical-scroll-proportion="0.6824085">
-          <folding>
-            <element signature="e#50#107#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TSP/ChallengeBundle/Util/Util.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="63" selection-start="1281" selection-end="1281" vertical-scroll-proportion="0.1570248">
@@ -702,16 +703,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/functions.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="147" column="25" selection-start="4528" selection-end="4528" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!block;n#setupCalendar#0" expanded="false" />
-            <element signature="n#!!block;n#sort#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TSP/ChallengeBundle/Resources/views/Default/productList.html.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state line="110" column="32" selection-start="4991" selection-end="5011" vertical-scroll-proportion="-0.65384614">
@@ -730,8 +721,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/Resources/views/frontend.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="33" selection-start="2916" selection-end="2916" vertical-scroll-proportion="0.27744982">
+        <state line="71" column="33" selection-start="2916" selection-end="2916" vertical-scroll-proportion="-9.038462">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TSP/ChallengeBundle/Controller/GridController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="54" column="11" selection-start="1735" selection-end="1735" vertical-scroll-proportion="-16.384615">
+          <folding>
+            <marker date="1379064711647" expanded="true" signature="1684:1732" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/functions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="82" column="19" selection-start="2712" selection-end="2712" vertical-scroll-proportion="0.5051546">
+          <folding>
+            <element signature="n#!!block;n#sort#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
