@@ -9,8 +9,76 @@
 
 namespace TSP\ChallengeBundle\Util;
 
+use TSP\ChallengeBundle\Util\GridParams;
 
 class Util {
+
+    /**
+     * Function to init required params for grid
+     * @param $container
+     * @param $postParameters
+     * @return array
+     */
+    static public function initParams($container,$postParameters){
+
+        // get the country via postParameters
+        $idCountry = $container->getParameter('tsp.default_country');
+        if (isset($postParameters['idCountry'])){
+            $idCountry = $postParameters['idCountry'];
+        } else if (isset($postParameters['selectedCountry'])){
+            $idCountry = $postParameters['selectedCountry'];
+        }
+
+        // get dates. If not range is set, today by default
+        $startDate = new \DateTime('today');
+        $endDate = new \DateTime('today');
+
+        if (isset($postParameters['endDate']) && isset($postParameters['startDate'])){
+            $fechaIni = $postParameters['startDate'];
+            $fechaFin = $postParameters['endDate'];
+
+            $startDate = new \DateTime(Util::parseDateFromCalendar($fechaIni));
+            $endDate = new \DateTime(Util::parseDateFromCalendar($fechaFin));
+        }
+
+
+        // GridParams
+        $pageSize = $container->getParameter('tsp.default_max_records');
+
+        // get default max records per page
+        if (isset($postParameters['pagesize'])){
+            $pageSize = $postParameters['pagesize'];
+        }
+
+        // params for grid sorting
+        $orderField =$container->getParameter('tsp.default_order_field');
+        $order = $container->getParameter('tsp.default_order');
+
+        if (isset($postParameters['orderField'])){
+            $orderField = $postParameters['orderField'];
+            $order = $postParameters['order'];
+        }
+
+        // next page and first record for pagination
+        $nextPage = 1;
+        $firstRecord = 0;
+
+        if (isset($_POST['nextPage'])){
+            $nextPage = $_POST['nextPage'];
+            $firstRecord = ($nextPage - 1) *  $pageSize;
+        }
+
+        // return params
+        return array('country' => $idCountry,
+                     'startDate' => $startDate,
+                     'endDate' => $endDate,
+                     '$pageSize' => $pageSize,
+                     'orderField' => $orderField,
+                     'order' => $order,
+                     'nextPage' => $nextPage,
+                     'firstRecord' => $firstRecord );
+    }
+
 
     /**
      * Function to invoke the repository query for sales
@@ -19,14 +87,11 @@ class Util {
      * @param $startDate
      * @param $endDate
      * @param $firstResult
-     * @param $maxResults
-     * @param $orderField
-     * @param $order
+     * @param $gridParams
      * @return array
      */
     static public function getProductList($idCountry, $em, $startDate, $endDate,
-                                          $firstResult,$maxResults,$orderField,$order){
-
+                                          $firstResult,$gridParams){
 
         // list of products
         $total = 0;
@@ -34,12 +99,12 @@ class Util {
             // General
             $total = $em->getRepository('ChallengeBundle:Sale')->countAllByDateRange($startDate,$endDate);
             $results = $em->getRepository('ChallengeBundle:Sale')->findAllByDateRange($startDate,$endDate,
-                $firstResult,$maxResults,$orderField,$order);
+                $firstResult,$gridParams->getMaxResultsPerPage(),$gridParams->getOrderField(),$gridParams->getOrder());
         } else{
             // By country
             $total = $em->getRepository('ChallengeBundle:Sale')->countAllByCountryAndDateRange($idCountry,$startDate,$endDate);
             $results = $em->getRepository('ChallengeBundle:Sale')->findAllByCountryAndDateRange($idCountry,
-                $startDate,$endDate,$firstResult,$maxResults,$orderField,$order);
+                $startDate,$endDate,$firstResult,$gridParams->getMaxResultsPerPage(),$gridParams->getOrderField(),$gridParams->getOrder());
         }
 
         return array('totalRecords' => $total, 'results' => $results);

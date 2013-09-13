@@ -5,6 +5,7 @@ namespace TSP\ChallengeBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Response;
 use TSP\ChallengeBundle\Util\Util;
+use TSP\ChallengeBundle\Util\GridParams;
 
 class ProductListController extends Controller{
 
@@ -14,68 +15,61 @@ class ProductListController extends Controller{
      */
     public function productListAction(){
 
-        // get selected country. If not set (first time page load), take default country from parameters
-        $idCountry = $this->container->getParameter('tsp.default_country');
-        if (isset($_POST['idCountry'])){
-            $idCountry = $_POST['idCountry'];
-        }
+        // init required params
+        $params = Util::initParams($this->container,$_POST);
 
-        // get dates. If not range is set, today by default
-        $startDate = new \DateTime('today');
-        $endDate = new \DateTime('today');
-
-        $fechaIni = 'not set';
-        $fechaFin = 'not set';
-
-        if (isset($_POST['endDate']) && isset($_POST['startDate'])){
-            $fechaIni = $_POST['startDate'];
-            $fechaFin = $_POST['endDate'];
-
-            $startDate = new \DateTime(Util::parseDateFromCalendar($fechaIni));
-            $endDate = new \DateTime(Util::parseDateFromCalendar($fechaFin));
-        }
-
-        // get default max records per page
-        $maxResultsPerPage = $this->container->getParameter('tsp.default_max_records');
-
-        // params for default sorting
-        $orderField = $this->container->getParameter('tsp.default_order_field');
-        $order = $this->container->getParameter('tsp.default_order');
-
-        if (isset($_POST['orderField'])){
-            $orderField = $_POST['orderField'];
-            $order = $_POST['order'];
-        }
-
+        // params for sorting and pagesize
+        $gridParams =  new GridParams;
+        $gridParams->setMaxResultsPerPage($params['$pageSize']);
+        $gridParams->setOrderField($params['orderField']);
+        $gridParams->setOrder($params['order']);
 
         // Get the entity manager
         $em = $this->getDoctrine()->getManager();
 
-        // Find all countries for the select
-        $countries = $em->getRepository('ChallengeBundle:Country')->findAll();
-
         // get the product list
-        $data = Util::getProductList($idCountry, $em, $startDate, $endDate,0,$maxResultsPerPage,$orderField,$order);
+        $data = Util::getProductList($params['country'], $em,$params['startDate'],$params['endDate'],
+            $params['firstRecord'],
+            $gridParams);
 
         if (!$data['results']) {
             return $this->render('ChallengeBundle:Default:noProducts.html.twig');
         }
 
-        $totalPages = Util::calculatePages(count($data['totalRecords']),$maxResultsPerPage);
-        $grid = array('currentPage' => 1,
+        $totalPages = Util::calculatePages(count($data['totalRecords']), $gridParams->getMaxResultsPerPage());
+        $grid = array('currentPage' => $params['nextPage'],
                       'totalPages' =>  $totalPages,
                       'totalRecords' => count($data['totalRecords']));
 
-        return $this->render('ChallengeBundle:Default:productList.html.twig',array(
-            'buys' => $data['results'],
-            'countries' => $countries,
-            'selectedCountry' => $idCountry,
-            'startDate' => $startDate,
-            'endDate' => $endDate,
-            'orderField' => $orderField,
-            'order' => $order,
-            'gridPaginationData' => $grid
-        ));
+        // Check if is an AJAX call
+        if ($this->getRequest()->isXmlHttpRequest()){
+            $response = array('gridPaginationData' => $grid,
+                'buy' => $data['results'],
+                'startDate' => $params['startDate']->format('d/m/Y'),
+                'endDate' =>  $params['endDate']->format('d/m/Y'),
+                'country' => $params['country'],
+                'orderField' => $gridParams->getOrderField(),
+                'order' => $gridParams->getOrder(),
+                'gridPaginationData' => $grid);
+
+            return new Response(json_encode($response));
+        } else{
+            // Find all countries for the select
+            $countries = $em->getRepository('ChallengeBundle:Country')->findAll();
+
+            return $this->render('ChallengeBundle:Default:productList.html.twig',array(
+                'buys' => $data['results'],
+                'countries' => $countries,
+                'selectedCountry' => $params['country'],
+                'startDate' => $params['startDate'],
+                'endDate' => $params['endDate'],
+                'orderField' => $gridParams->getOrderField(),
+                'order' => $gridParams->getOrder(),
+                'gridPaginationData' => $grid
+            ));
+        }
+
+
     }
 
 }

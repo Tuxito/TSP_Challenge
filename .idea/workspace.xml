@@ -7,7 +7,7 @@
     <list default="true" id="f63e0e28-a649-4588-b766-008450cbab6a" name="Default" comment="" />
     <ignored path="TSP.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/a.dummy" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1379056071237" ignored="false" />
+    <file path="/a.dummy" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1379072118113" ignored="false" />
     <file path="/config.yml" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1378980576687" ignored="false" />
     <file path="/routing.yml" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1378485335541" ignored="false" />
     <file path="/DefaultController.php" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1378377116856" ignored="false" />
@@ -21,10 +21,10 @@
     <file path="/AjaxController.php" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1378376241728" ignored="false" />
     <file path="/SelectCountryController.php" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1378376811946" ignored="false" />
     <file path="$PROJECT_DIR$/vendor/sensio/generator-bundle/Sensio/Bundle/GeneratorBundle/Tests/Generator/BundleGeneratorTest.php" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1378377353867" ignored="false" />
-    <file path="/ProductListController.php" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1378887711086" ignored="false" />
+    <file path="/ProductListController.php" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1379069975076" ignored="false" />
     <file path="$PROJECT_DIR$/app/cache/dev/twig/4a/a0/900bb164b74c9b0adca0ceba8399.php" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1379059979808" ignored="false" />
-    <file path="/GridController.php" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1379064531723" ignored="false" />
-    <file path="/Util.php" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1378979152962" ignored="false" />
+    <file path="/GridController.php" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1379071931161" ignored="false" />
+    <file path="/Util.php" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1379069156851" ignored="false" />
     <file path="/composer.json" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1378447612240" ignored="false" />
     <file path="/style.css" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1378463464911" ignored="false" />
     <file path="/styles.css" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1379061696670" ignored="false" />
@@ -35,6 +35,7 @@
     <file path="/*.regexp" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1378980536354" ignored="false" />
     <file path="/SaleRepository.php" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1379055844992" ignored="false" />
     <file path="/Sale.php" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1379055900815" ignored="false" />
+    <file path="/GridParams.php" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1379069379663" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,53 +55,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="productList.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TSP/ChallengeBundle/Resources/views/Default/productList.html.twig">
+      <file leaf-file-name="ProductListController.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/TSP/ChallengeBundle/Controller/ProductListController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="110" column="32" selection-start="4991" selection-end="5011" vertical-scroll-proportion="-0.65384614">
-              <folding>
-                <element signature="n#style#0;n#input#0;n#span#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="GridController.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TSP/ChallengeBundle/Controller/GridController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="11" selection-start="1735" selection-end="1735" vertical-scroll-proportion="-16.384615">
-              <folding>
-                <marker date="1379064711647" expanded="true" signature="1684:1732" placeholder="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="frontend.html.twig" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/Resources/views/frontend.html.twig">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="71" column="33" selection-start="2916" selection-end="2916" vertical-scroll-proportion="-9.038462">
+            <state line="25" column="0" selection-start="789" selection-end="789" vertical-scroll-proportion="0.13695395">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/css/styles.css">
+      <file leaf-file-name="Util.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TSP/ChallengeBundle/Util/Util.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="11" selection-start="1" selection-end="11" vertical-scroll-proportion="0.0">
+            <state line="61" column="52" selection-start="1979" selection-end="1979" vertical-scroll-proportion="-18.961538">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="functions.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/js/functions.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="19" selection-start="2712" selection-end="2712" vertical-scroll-proportion="0.5051546">
-              <folding>
-                <element signature="n#!!block;n#sort#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -115,22 +83,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/config/routing_dev.yml" />
-        <option value="$PROJECT_DIR$/app/config/routing.yml" />
         <option value="$PROJECT_DIR$/app/cache/prod/appProdProjectContainer.php" />
         <option value="$PROJECT_DIR$/src/TSP/ChallengeBundle/Resources/views/Default/noProducts.html.twig" />
         <option value="$PROJECT_DIR$/app/config/config.yml" />
-        <option value="$PROJECT_DIR$/src/TSP/ChallengeBundle/Controller/ProductListController.php" />
         <option value="$PROJECT_DIR$/src/TSP/ChallengeBundle/Entity/BuyRepository.php" />
-        <option value="$PROJECT_DIR$/src/TSP/ChallengeBundle/Util/Util.php" />
         <option value="$PROJECT_DIR$/src/TSP/ChallengeBundle/Entity/Sale.php" />
         <option value="$PROJECT_DIR$/src/TSP/ChallengeBundle/Entity/SaleRepository.php" />
         <option value="$PROJECT_DIR$/app/config/parameters.yml" />
         <option value="$PROJECT_DIR$/web/css/styles.css" />
-        <option value="$PROJECT_DIR$/src/TSP/ChallengeBundle/Resources/views/Default/productList.html.twig" />
         <option value="$PROJECT_DIR$/app/Resources/views/frontend.html.twig" />
-        <option value="$PROJECT_DIR$/src/TSP/ChallengeBundle/Controller/GridController.php" />
         <option value="$PROJECT_DIR$/web/js/functions.js" />
+        <option value="$PROJECT_DIR$/src/TSP/ChallengeBundle/Util/GridParams.php" />
+        <option value="$PROJECT_DIR$/src/TSP/ChallengeBundle/Controller/GridController.php" />
+        <option value="$PROJECT_DIR$/src/TSP/ChallengeBundle/Resources/views/Default/productList.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/TSP/ChallengeBundle/Util/Util.php" />
+        <option value="$PROJECT_DIR$/src/TSP/ChallengeBundle/Controller/ProductListController.php" />
       </list>
     </option>
   </component>
@@ -428,42 +396,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TSP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TSP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TSP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="TSP" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
     </panes>
@@ -553,10 +485,11 @@
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Framework" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2998933" sideWeight="0.6718576" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3062967" sideWeight="0.6718576" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39933258" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -565,7 +498,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32814237" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -634,113 +566,94 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/web/js/bootstrap.js">
+    <entry file="file://$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/RuntimeReflectionService.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="633" column="1" selection-start="9507" selection-end="9507" vertical-scroll-proportion="0.3523256" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/base.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TSP/ChallengeBundle/Resources/views/Default/noProducts.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="264" vertical-scroll-proportion="-0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="21" selection-start="2222" selection-end="2235" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TSP/ChallengeBundle/Controller/ProductListController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="48" column="0" selection-start="1678" selection-end="1678" vertical-scroll-proportion="0.24793388">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TSP/ChallengeBundle/Util/Util.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="63" selection-start="1281" selection-end="1281" vertical-scroll-proportion="0.1570248">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/doctrine/common/lib/Doctrine/Common/Persistence/Mapping/RuntimeReflectionService.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TSP/ChallengeBundle/Entity/Sale.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="10" selection-start="330" selection-end="330" vertical-scroll-proportion="0.22077923">
-          <folding />
-        </state>
+        <state line="17" column="10" selection-start="330" selection-end="330" vertical-scroll-proportion="0.22077923" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TSP/ChallengeBundle/Entity/SaleRepository.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="1" selection-start="3938" selection-end="3938" vertical-scroll-proportion="0.9598583">
-          <folding>
-            <element signature="e#202#236#0" expanded="false" />
-          </folding>
-        </state>
+        <state line="111" column="1" selection-start="3938" selection-end="3938" vertical-scroll-proportion="0.9598583" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="19" selection-start="175" selection-end="175" vertical-scroll-proportion="0.09736541">
+        <state line="5" column="19" selection-start="175" selection-end="175" vertical-scroll-proportion="0.09736541" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="11" selection-start="1" selection-end="11" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/frontend.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="71" column="33" selection-start="2916" selection-end="2916" vertical-scroll-proportion="-9.038462" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TSP/ChallengeBundle/Entity/Country.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="4" selection-start="372" selection-end="386" vertical-scroll-proportion="-11.115385" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vendor/symfony/symfony/src/Symfony/Component/DependencyInjection/ContainerAware.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="29" selection-start="429" selection-end="443" vertical-scroll-proportion="0.2609209">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/_superglobals.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="6" selection-start="3039" selection-end="3042" vertical-scroll-proportion="0.68476975">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TSP/ChallengeBundle/Util/GridParams.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="17" selection-start="299" selection-end="305" vertical-scroll-proportion="-7.8461537">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TSP/ChallengeBundle/Resources/views/Default/productList.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="110" column="32" selection-start="4991" selection-end="5011" vertical-scroll-proportion="-0.65384614">
-          <folding>
-            <element signature="n#style#0;n#input#0;n#span#0;n#div#1;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="11" selection-start="1" selection-end="11" vertical-scroll-proportion="0.0">
+        <state line="67" column="98" selection-start="2889" selection-end="2889" vertical-scroll-proportion="0.5243309">
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/Resources/views/frontend.html.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="71" column="33" selection-start="2916" selection-end="2916" vertical-scroll-proportion="-9.038462">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/TSP/ChallengeBundle/Controller/GridController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="11" selection-start="1735" selection-end="1735" vertical-scroll-proportion="-16.384615">
-          <folding>
-            <marker date="1379064711647" expanded="true" signature="1684:1732" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/js/functions.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="19" selection-start="2712" selection-end="2712" vertical-scroll-proportion="0.5051546">
-          <folding>
-            <element signature="n#!!block;n#sort#0" expanded="false" />
-          </folding>
+        <state line="75" column="32" selection-start="2446" selection-end="2446" vertical-scroll-proportion="0.4089347">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="7" column="0" selection-start="201" selection-end="201" vertical-scroll-proportion="0.13631158">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TSP/ChallengeBundle/Util/Util.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="52" selection-start="1979" selection-end="1979" vertical-scroll-proportion="-18.961538">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TSP/ChallengeBundle/Controller/ProductListController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="0" selection-start="789" selection-end="789" vertical-scroll-proportion="0.13695395">
+          <folding />
         </state>
       </provider>
     </entry>
