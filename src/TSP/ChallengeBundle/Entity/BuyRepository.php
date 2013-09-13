@@ -86,7 +86,8 @@ class BuyRepository extends EntityRepository {
     /**
      * Function to get the list of product for the selected page between 2 dates and country
      */
-    public function findAllByCountryAndDateRange($idCountry,$dateIni, $dateEnd,$firstResult,$maxResults){
+    public function findAllByCountryAndDateRange($idCountry,$dateIni, $dateEnd,$firstResult,$maxResults,
+                                                 $orderField,$order){
         $em = $this->getEntityManager();
 
         $dql = 'SELECT p.description as product,
@@ -95,7 +96,9 @@ class BuyRepository extends EntityRepository {
                        sum(b.units) as units
                 FROM ChallengeBundle:Buy b JOIN b.product p
                 WHERE b.date between :fechaIni AND :fechaFin AND b.country = :country
-                GROUP BY b.product';
+                GROUP BY b.product ORDER BY ';
+
+        $dql = $dql.' '. $orderField.' '.$order;
 
         $consulta = $em->createQuery($dql);
         $consulta->setParameter('fechaIni', $dateIni);

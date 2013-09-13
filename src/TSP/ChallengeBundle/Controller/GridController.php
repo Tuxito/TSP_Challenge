@@ -40,7 +40,7 @@ class GridController extends Controller{
 
         if (isset($_POST['orderField'])){
             $orderField = $_POST['orderField'];
-            $order = $_POST['oder'];
+            $order = $_POST['order'];
         }
 
         // Get the entity manager

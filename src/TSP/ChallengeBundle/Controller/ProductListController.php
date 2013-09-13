@@ -42,6 +42,11 @@ class ProductListController extends Controller{
         $orderField = $this->container->getParameter('tsp.default_order_field');
         $order = $this->container->getParameter('tsp.default_order');
 
+        if (isset($_POST['orderField'])){
+            $orderField = $_POST['orderField'];
+            $order = $_POST['order'];
+        }
+
 
         // Get the entity manager
         $em = $this->getDoctrine()->getManager();

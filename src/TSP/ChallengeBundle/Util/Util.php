@@ -39,7 +39,7 @@ class Util {
             // By country
             $total = $em->getRepository('ChallengeBundle:Buy')->countAllByCountryAndDateRange($idCountry,$startDate,$endDate);
             $results = $em->getRepository('ChallengeBundle:Buy')->findAllByCountryAndDateRange($idCountry,
-                $startDate,$endDate,$firstResult,$maxResults);
+                $startDate,$endDate,$firstResult,$maxResults,$orderField,$order);
         }
 
         return array('totalRecords' => $total, 'results' => $results);

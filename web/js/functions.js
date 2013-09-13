@@ -67,6 +67,7 @@ function sort(field){
 function gotoPage(pageNumber){
     $("#productListTable").fadeOut("slow");
 
+
     $.post( $("#path").val(),
         {selectedCountry: $("#countrySelect").val(),
             startDate : $("#startDate").val(),
