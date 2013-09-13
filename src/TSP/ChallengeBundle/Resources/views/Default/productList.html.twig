@@ -68,8 +68,8 @@
                             <input type="hidden" name="path" id="path" value="{{path('product_list')}}" size="10">
 
                             {# Path to ajax call, hidden input to locate via javascript #}
-                            <input type="hidden" name="orderField" id="orderField" value="{{ orderField }}" size="10">
-                            <input type="hidden" name="order" id="order" value="{{ order }}" size="10">
+                            <input type="hidden" name="orderField" id="orderField" value="{{ gridParams.orderField }}" size="10">
+                            <input type="hidden" name="order" id="order" value="{{ gridParams.order }}" size="10">
                         </form>
                     </div>
 
@@ -92,14 +92,14 @@
 
                 <div class="row">
                             <span class="span1">
-                                <input type="hidden" id="totalPagesHidden" value=" {{ gridPaginationData.totalPages }}"/>
+                                <input type="hidden" id="totalPagesHidden" value=" {{ gridParams.totalPages }}"/>
 
                                 <span id="totalResultsLabel" class="label label-info">
-                                       Total results : {{ gridPaginationData.totalRecords }}
+                                       Total results : {{ gridParams.totalRecords }}
                                 </span>
 
                                 <span id="totalPagesLabel" class="label label-info">
-                                       Total pages : {{ gridPaginationData.totalPages }}
+                                       Total pages : {{ gridParams.totalPages }}
                                 </span>
                             </span>
                 </div>
@@ -143,9 +143,9 @@
                         <li class="disabled"><a>&lt;</a></li>
                         <li class="active"><a>1</a></li>
 
-                        {% if (gridPaginationData.totalPages > 1) %}
-                            {% if (gridPaginationData.totalPages <= 6) %}
-                                {% for i in 2..gridPaginationData.totalPages %}
+                        {% if (gridParams.totalPages > 1) %}
+                            {% if (gridParams.totalPages <= 6) %}
+                                {% for i in 2..gridParams.totalPages %}
                                     <li class="inactive"><a onclick="gotoPage({{ i }})">{{ i }}</a></li>
                                 {% endfor %}
                             {% else %}
@@ -156,9 +156,9 @@
                             {% endif %}
                         {% endif %}
 
-                        <li class="inactive"><a onclick="gotoPage({{ gridPaginationData.currentPage + 1 }})">&gt;</a></li>
+                        <li class="inactive"><a onclick="gotoPage({{ gridParams.currentPage + 1 }})">&gt;</a></li>
 
-                        <li class="inactive"><a onclick="gotoPage({{ gridPaginationData.totalPages }})">&raquo;</a></li>
+                        <li class="inactive"><a onclick="gotoPage({{ gridParams.totalPages }})">&raquo;</a></li>
                     </ul>
                 </div>
                 {# End Pagination #}

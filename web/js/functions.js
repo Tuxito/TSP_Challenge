@@ -78,7 +78,7 @@ function gotoPage(pageNumber){
             order:$("#order").val()},
 
         function(response){
-            if (response.gridPaginationData.totalRecords == 0){
+            if (response.gridParams.totalRecords == 0){
                 alert('No data found for selected country/dates');
             } else{
                 var datesHtml = response.startDate + " - " + response.endDate;
@@ -88,9 +88,9 @@ function gotoPage(pageNumber){
                 repaintTable(response);
 
                 // repaint the paginator
-                repaintPaginator(response.gridPaginationData.currentPage,
-                    response.gridPaginationData.totalPages,
-                    response.gridPaginationData.totalRecords);
+                repaintPaginator(response.gridParams.currentPage,
+                    response.gridParams.totalPages,
+                    response.gridParams.totalRecords);
             }
         }, "json");
 }
@@ -113,9 +113,9 @@ function resizeList(){
             repaintTable(response);
 
             // repaint the paginator
-            repaintPaginator(response.gridPaginationData.currentPage,
-                response.gridPaginationData.totalPages,
-                response.gridPaginationData.totalRecords);
+            repaintPaginator(response.gridParams.currentPage,
+                response.gridParams.totalPages,
+                response.gridParams.totalRecords);
         }, "json");
 }
 

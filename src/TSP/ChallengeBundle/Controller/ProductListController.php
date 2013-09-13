@@ -32,25 +32,27 @@ class ProductListController extends Controller{
             $params['firstRecord'],
             $gridParams);
 
+
         if (!$data['results']) {
-            return $this->render('ChallengeBundle:Default:noProducts.html.twig');
+            if (!$this->getRequest()->isXmlHttpRequest()){
+                return $this->render('ChallengeBundle:Default:noProducts.html.twig');
+            }
+
         }
 
+
         $totalPages = Util::calculatePages(count($data['totalRecords']), $gridParams->getMaxResultsPerPage());
-        $grid = array('currentPage' => $params['nextPage'],
-                      'totalPages' =>  $totalPages,
-                      'totalRecords' => count($data['totalRecords']));
+        $gridParams->setTotalPages($totalPages);
+        $gridParams->setCurrentPage($params['nextPage']);
+        $gridParams->setTotalRecords(count($data['totalRecords']));
 
         // Check if is an AJAX call
         if ($this->getRequest()->isXmlHttpRequest()){
-            $response = array('gridPaginationData' => $grid,
-                'buy' => $data['results'],
+            $response = array('buy' => $data['results'],
                 'startDate' => $params['startDate']->format('d/m/Y'),
                 'endDate' =>  $params['endDate']->format('d/m/Y'),
                 'country' => $params['country'],
-                'orderField' => $gridParams->getOrderField(),
-                'order' => $gridParams->getOrder(),
-                'gridPaginationData' => $grid);
+                'gridParams' => Util::dismount($gridParams));
 
             return new Response(json_encode($response));
         } else{
@@ -63,9 +65,7 @@ class ProductListController extends Controller{
                 'selectedCountry' => $params['country'],
                 'startDate' => $params['startDate'],
                 'endDate' => $params['endDate'],
-                'orderField' => $gridParams->getOrderField(),
-                'order' => $gridParams->getOrder(),
-                'gridPaginationData' => $grid
+                'gridParams' => Util::dismount($gridParams)
             ));
         }
 

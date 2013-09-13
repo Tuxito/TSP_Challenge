@@ -18,6 +18,61 @@ class GridParams {
 
     protected $order;
 
+    protected $totalPages;
+
+    protected $currentPage;
+
+    protected $totalRecords;
+
+    /**
+     * @param mixed $totalRecords
+     */
+    public function setTotalRecords($totalRecords)
+    {
+        $this->totalRecords = $totalRecords;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTotalRecords()
+    {
+        return $this->totalRecords;
+    }
+
+    /**
+     * @param mixed $currentPage
+     */
+    public function setCurrentPage($currentPage)
+    {
+        $this->currentPage = $currentPage;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCurrentPage()
+    {
+        return $this->currentPage;
+    }
+
+
+    /**
+     * @param mixed $totalPages
+     */
+    public function setTotalPages($totalPages)
+    {
+        $this->totalPages = $totalPages;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getTotalPages()
+    {
+        return $this->totalPages;
+    }
+
     /**
      * @param mixed $order
      */

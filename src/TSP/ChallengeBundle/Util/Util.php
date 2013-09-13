@@ -139,4 +139,21 @@ class Util {
         $dateExploded = explode("/",$dateFromCalendar);
         return ($dateExploded[2].'/'.$dateExploded[0].'/'.$dateExploded[1]);
     }
+
+
+    /**
+     * Function to generate an array of accesible properties for an object
+     * @param $object
+     * @return array
+     */
+    static public function dismount($object) {
+        $reflectionClass = new \ReflectionClass(get_class($object));
+        $array = array();
+        foreach ($reflectionClass->getProperties() as $property) {
+            $property->setAccessible(true);
+            $array[$property->getName()] = $property->getValue($object);
+            $property->setAccessible(false);
+        }
+        return $array;
+    }
 }
