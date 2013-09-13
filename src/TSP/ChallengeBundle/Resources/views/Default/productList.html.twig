@@ -132,15 +132,17 @@
                                 <li class="disabled"><a>&lt;</a></li>
                                 <li class="active"><a>1</a></li>
 
-                                {% if gridPaginationData.totalPages <= 6 %}
-                                    {% for i in 2..gridPaginationData.totalPages %}
-                                        <li class="inactive"><a onclick="gotoPage({{ i }})">{{ i }}</a></li>
-                                    {% endfor %}
-                                {% else %}
-                                    {% for i in 2..6 %}
-                                        <li class="inactive"><a onclick="gotoPage({{ i }})">{{ i }}</a></li>
-                                    {% endfor %}
-                                    <li class="disabled"><a>...</a></li>
+                                {% if (gridPaginationData.totalPages > 1) %}
+                                    {% if (gridPaginationData.totalPages <= 6) %}
+                                        {% for i in 2..gridPaginationData.totalPages %}
+                                            <li class="inactive"><a onclick="gotoPage({{ i }})">{{ i }}</a></li>
+                                        {% endfor %}
+                                    {% else %}
+                                        {% for i in 2..6 %}
+                                            <li class="inactive"><a onclick="gotoPage({{ i }})">{{ i }}</a></li>
+                                        {% endfor %}
+                                        <li class="disabled"><a>...</a></li>
+                                    {% endif %}
                                 {% endif %}
 
                                 <li class="inactive"><a onclick="gotoPage({{ gridPaginationData.currentPage + 1 }})">&gt;</a></li>

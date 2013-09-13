@@ -14,7 +14,7 @@
     <file path="/ayuda.html.twig" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1378317181458" ignored="false" />
     <file path="/d22565573228a41c01bf4efd2eb0.php" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1378316718926" ignored="false" />
     <file path="/Buy.php" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1378317941900" ignored="false" />
-    <file path="/productList.html.twig" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1379054478315" ignored="false" />
+    <file path="/productList.html.twig" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1379055340395" ignored="false" />
     <file path="/BuyRepository.php" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1379054460347" ignored="false" />
     <file path="/SoldRepository.php" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1378898181891" ignored="false" />
     <file path="/functions.js" changelist="f63e0e28-a649-4588-b766-008450cbab6a" time="1379051677694" ignored="false" />
@@ -52,19 +52,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="BuyRepository.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/TSP/ChallengeBundle/Entity/BuyRepository.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="44" selection-start="3526" selection-end="3526" vertical-scroll-proportion="-21.461538">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="productList.html.twig" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/TSP/ChallengeBundle/Resources/views/Default/productList.html.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="47" selection-start="3170" selection-end="3170" vertical-scroll-proportion="0.44155845">
+            <state line="145" column="40" selection-start="6809" selection-end="6809" vertical-scroll-proportion="0.5218418">
               <folding />
             </state>
           </provider>
@@ -662,7 +653,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/TSP/ChallengeBundle/Resources/views/Default/productList.html.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="47" selection-start="3170" selection-end="3170" vertical-scroll-proportion="0.44155845">
+        <state line="145" column="40" selection-start="6809" selection-end="6809" vertical-scroll-proportion="0.5218418">
           <folding />
         </state>
       </provider>
