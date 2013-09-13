@@ -75,3 +75,5 @@ swiftmailer:
 parameters:
     tsp.default_country : '0'
     tsp.default_max_records : '10'
+    tsp.default_order_field : 'product'
+    tsp.default_order : 'asc'

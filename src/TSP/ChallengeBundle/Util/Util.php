@@ -20,9 +20,12 @@ class Util {
      * @param $endDate
      * @param $firstResult
      * @param $maxResults
+     * @param $orderField
+     * @param $order
      * @return array
      */
-    static public function getProductList($idCountry, $em, $startDate, $endDate,$firstResult,$maxResults){
+    static public function getProductList($idCountry, $em, $startDate, $endDate,
+                                          $firstResult,$maxResults,$orderField,$order){
 
 
         // list of products
@@ -30,7 +33,8 @@ class Util {
         if ($idCountry == 0){
             // General
             $total = $em->getRepository('ChallengeBundle:Buy')->countAllByDateRange($startDate,$endDate);
-            $results = $em->getRepository('ChallengeBundle:Buy')->findAllByDateRange($startDate,$endDate,$firstResult,$maxResults);
+            $results = $em->getRepository('ChallengeBundle:Buy')->findAllByDateRange($startDate,$endDate,
+                $firstResult,$maxResults,$orderField,$order);
         } else{
             // By country
             $total = $em->getRepository('ChallengeBundle:Buy')->countAllByCountryAndDateRange($idCountry,$startDate,$endDate);

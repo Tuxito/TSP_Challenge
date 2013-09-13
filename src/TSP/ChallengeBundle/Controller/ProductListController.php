@@ -38,6 +38,11 @@ class ProductListController extends Controller{
         // get default max records per page
         $maxResultsPerPage = $this->container->getParameter('tsp.default_max_records');
 
+        // params for default sorting
+        $orderField = $this->container->getParameter('tsp.default_order_field');
+        $order = $this->container->getParameter('tsp.default_order');
+
+
         // Get the entity manager
         $em = $this->getDoctrine()->getManager();
 
@@ -45,7 +50,7 @@ class ProductListController extends Controller{
         $countries = $em->getRepository('ChallengeBundle:Country')->findAll();
 
         // get the product list
-        $data = Util::getProductList($idCountry, $em, $startDate, $endDate,0,$maxResultsPerPage);
+        $data = Util::getProductList($idCountry, $em, $startDate, $endDate,0,$maxResultsPerPage,$orderField,$order);
 
         if (!$data['results']) {
             return $this->render('ChallengeBundle:Default:noProducts.html.twig');
@@ -62,6 +67,8 @@ class ProductListController extends Controller{
             'selectedCountry' => $idCountry,
             'startDate' => $startDate,
             'endDate' => $endDate,
+            'orderField' => $orderField,
+            'order' => $order,
             'gridPaginationData' => $grid
         ));
     }

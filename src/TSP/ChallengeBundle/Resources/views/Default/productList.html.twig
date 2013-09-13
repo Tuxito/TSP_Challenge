@@ -19,13 +19,6 @@
             setupCalendar();
         });
 
-        /**
-         * Function for sort the list
-         * @param field
-         */
-        function sort(field){
-            alert('sorting by ' + field);
-        }
     </script>
 
     <div class="container-fluid">
@@ -80,6 +73,9 @@
                             {# Path to ajax call, hidden input to locate via javascript #}
                             <input type="hidden" name="path" id="path" value="{{path('paginate_result')}}" size="10">
 
+                            {# Path to ajax call, hidden input to locate via javascript #}
+                            <input type="text" name="orderField" id="orderField" value="{{ orderField }}" size="10">
+                            <input type="text" name="order" id="order" value="{{ order }}" size="10">
                         </form>
                     </div>
 
@@ -107,9 +103,9 @@
                             <tr class="info">
                                 <th onclick="sort('product')">Product</th>
                                 <th onclick="sort('units')">Units sold</th>
-                                <th onclick="sort('cost')">Total Cost</th>
-                                <th onclick="sort('revenue')">Total Revenue</th>
-                                <th onclick="sort('profit')">Total Profit</th>
+                                <th>Total Cost</th>
+                                <th>Total Revenue</th>
+                                <th>Total Profit</th>
                             </tr>
 
                             {% for buy in buys %}

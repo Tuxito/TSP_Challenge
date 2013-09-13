@@ -36,6 +36,30 @@ function setupCalendar(){
     });
 }
 
+
+/**
+ * Function for sort the list
+ * @param field
+ */
+function sort(field){
+
+    // update hidden fields with orderField and order
+    if ($("#orderField").val() != field){
+        // when change the order field, always order 'asc'
+        $("#order").val('asc');
+    } else{
+        if ($("#order").val() == 'asc'){
+            $("#order").val('desc');
+        } else{
+            $("#order").val('asc');
+        }
+    }
+
+    $("#orderField").val(field);
+
+    gotoPage(1);
+}
+
 /**
  * Function to iterate over pages
  * @param pageNumber
@@ -43,28 +67,17 @@ function setupCalendar(){
 function gotoPage(pageNumber){
     $("#productListTable").fadeOut("slow");
 
-    // Country selected
-    var selectedCountry = $("#countrySelect").val();
-
-    // Pagesize
-    var recordsSize = $("#numRecorsSelect").val();
-
-    // Dates
-    var startDate = $("#startDate").val();
-    var endDate = $("#endDate").val();
-
-    // path to ajax call
-    var path = $("#path").val();
-    $.post( path,
-        {selectedCountry: selectedCountry,
-            startDate : startDate,
-            endDate : endDate,
-            pagesize : recordsSize,
-            nextPage:pageNumber},
+    $.post( $("#path").val(),
+        {selectedCountry: $("#countrySelect").val(),
+            startDate : $("#startDate").val(),
+            endDate : $("#endDate").val(),
+            pagesize : $("#numRecorsSelect").val(),
+            nextPage:pageNumber,
+            orderField: $("#orderField").val(),
+            order:$("#order").val()},
 
         function(response){
             var datesHtml = response.startDate + " - " + response.endDate;
-
             $("#dates").html(datesHtml);
 
             // repaint the table
@@ -83,21 +96,11 @@ function gotoPage(pageNumber){
 function resizeList(){
     $("#productListTable").fadeOut("slow");
 
-    var recordsSize = $("#numRecorsSelect").val();
-    var selectedCountry = $("#countrySelect").val();
-
-    // Dates
-    var startDate = $("#startDate").val();
-    var endDate = $("#endDate").val();
-
-    // path to ajax call
-    var path = $("#path").val();
-
-    $.post(path,
-    {selectedCountry: selectedCountry,
-        startDate : startDate,
-        endDate : endDate,
-        pagesize : recordsSize,
+    $.post($("#path").val(),
+    {selectedCountry: $("#countrySelect").val(),
+        startDate : $("#startDate").val(),
+        endDate : $("#endDate").val(),
+        pagesize :  $("#numRecorsSelect").val(),
         nextPage:1},
 
         function(response){
@@ -137,8 +140,8 @@ function moveToPage(){
 function repaintTable(response){
     // Construct table of results
     var table = '<tr class="info">' +
-        '<th>Product</th>' +
-        '<th>Units sold</th>' +
+        '<th onclick=sort("product")>Product</th>' +
+        '<th onclick=sort("units")>Units sold</th>' +
         '<th>Total Cost</th>' +
         '<th>Total Revenue</th>' +
         '<th>Total Profit</th>' +

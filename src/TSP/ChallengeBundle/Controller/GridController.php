@@ -34,11 +34,20 @@ class GridController extends Controller{
         $nextPage = $_POST['nextPage'];
         $firstRecord = ($nextPage - 1) * $maxResults;
 
+        // default sorting
+        $orderField = $this->container->getParameter('tsp.default_order_field');
+        $order = $this->container->getParameter('tsp.default_order');
+
+        if (isset($_POST['orderField'])){
+            $orderField = $_POST['orderField'];
+            $order = $_POST['oder'];
+        }
+
         // Get the entity manager
         $em = $this->getDoctrine()->getManager();
 
         // get the product list
-        $data = Util::getProductList($idCountry, $em, $startDate, $endDate,$firstRecord,$maxResults);
+        $data = Util::getProductList($idCountry, $em, $startDate, $endDate,$firstRecord,$maxResults,$orderField,$order);
 
         if (!$data['results']) {
             return $this->render('ChallengeBundle:Default:noProducts.html.twig');
@@ -58,6 +67,8 @@ class GridController extends Controller{
             'startDate' => $startDate->format('d/m/Y'),
             'endDate' =>  $endDate->format('d/m/Y'),
             'country' => $idCountry,
+            'orderField' => $orderField,
+            'order' => $order,
             'gridPaginationData' => $grid);
 
         return new Response(json_encode($response));
