@@ -32,13 +32,13 @@ class Util {
         $total = 0;
         if ($idCountry == 0){
             // General
-            $total = $em->getRepository('ChallengeBundle:Buy')->countAllByDateRange($startDate,$endDate);
-            $results = $em->getRepository('ChallengeBundle:Buy')->findAllByDateRange($startDate,$endDate,
+            $total = $em->getRepository('ChallengeBundle:Sale')->countAllByDateRange($startDate,$endDate);
+            $results = $em->getRepository('ChallengeBundle:Sale')->findAllByDateRange($startDate,$endDate,
                 $firstResult,$maxResults,$orderField,$order);
         } else{
             // By country
-            $total = $em->getRepository('ChallengeBundle:Buy')->countAllByCountryAndDateRange($idCountry,$startDate,$endDate);
-            $results = $em->getRepository('ChallengeBundle:Buy')->findAllByCountryAndDateRange($idCountry,
+            $total = $em->getRepository('ChallengeBundle:Sale')->countAllByCountryAndDateRange($idCountry,$startDate,$endDate);
+            $results = $em->getRepository('ChallengeBundle:Sale')->findAllByCountryAndDateRange($idCountry,
                 $startDate,$endDate,$firstResult,$maxResults,$orderField,$order);
         }
 
