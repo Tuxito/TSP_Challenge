@@ -1,3 +1,11 @@
+.top_buffer {
+    margin-top:20px;
+}
+
+.send_bottom{
+    vertical-align: bottom;
+}
+
 .select_record_size {
     width: 60px;
 }

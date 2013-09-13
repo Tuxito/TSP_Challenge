@@ -68,43 +68,58 @@
             <h3 id="myModalLabel">Contact</h3>
         </div>
         <div class="modal-body">
-            <p>
-              <img src="{{  asset('img/tuxito.jpg')  }}" class="img-polaroid">
+            <div class="row">
+                <div class="span2">
+                    <div class="clearfix content-heading">
+                        <img src="{{  asset('img/tuxito.jpg')  }}" class="img-polaroid pull-left">
+                    </div>
+                </div>
 
-              <h5>Alfredo León Fernández</h5>
-            </p>
+                <div class="span3">
+                    <div class="row">
+                        <h5>Alfredo León Fernández</h5>
+                    </div>
+                    <div class="row">
+                        <img src="{{  asset('img/mail.png')  }}">
+                    </div>
+                </div>
+            </div>
 
-            <p>
-                {# Linkedin button #}
-                <script src="//platform.linkedin.com/in.js" type="text/javascript">
-                    lang: en_US
-                </script>
-                <script type="IN/FollowCompany" data-id="1233516" data-counter="none"></script>
+            <div class="row top_buffer">
+                <div class="span6">
+                    <div class="clearfix content-heading">
+                        {# Linkedin button #}
+                        <script src="//platform.linkedin.com/in.js" type="text/javascript">
+                            lang: en_US
+                        </script>
+                        <script type="IN/FollowCompany" data-id="1233516" data-counter="none"></script>
 
-                {# Twitter button #}
-                <a href="https://twitter.com/tux9R" class="twitter-follow-button" data-show-count="false" data-lang="es">Seguir a @tux9R</a>
-                <script>!function(d,s,id){
-                        var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
-                        if(!d.getElementById(id)){
-                            js=d.createElement(s);
-                            js.id=id;
-                            js.src=p+'://platform.twitter.com/widgets.js';
-                            fjs.parentNode.insertBefore(js,fjs);
-                        }
-                    }(document, 'script', 'twitter-wjs');
-                </script>
+                        {# G+ button#}
+                        <div class="g-follow" data-annotation="none" data-height="20" data-href="//plus.google.com/112029480863004323510" data-rel="author"></div>
 
-                {# G+ button#}
-                <div class="g-follow" data-annotation="none" data-height="20" data-href="//plus.google.com/112029480863004323510" data-rel="author"></div>
+                        <script type="text/javascript">
+                            (function() {
+                                var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                                po.src = 'https://apis.google.com/js/plusone.js';
+                                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+                            })();
+                        </script>
 
-                <script type="text/javascript">
-                    (function() {
-                        var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-                        po.src = 'https://apis.google.com/js/plusone.js';
-                        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-                    })();
-                </script>
-            </p>
+                        {# Twitter button #}
+                        <a href="https://twitter.com/tux9R" class="twitter-follow-button" data-show-count="false" data-lang="es">Seguir a @tux9R</a>
+                        <script>!function(d,s,id){
+                                var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+                                if(!d.getElementById(id)){
+                                    js=d.createElement(s);
+                                    js.id=id;
+                                    js.src=p+'://platform.twitter.com/widgets.js';
+                                    fjs.parentNode.insertBefore(js,fjs);
+                                }
+                            }(document, 'script', 'twitter-wjs');
+                        </script>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="modal-footer">

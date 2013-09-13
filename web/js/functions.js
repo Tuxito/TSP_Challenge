@@ -141,11 +141,11 @@ function moveToPage(){
 function repaintTable(response){
     // Construct table of results
     var table = '<tr class="info">' +
-        '<th onclick=sort("product")>Product</th>' +
-        '<th onclick=sort("units")>Units sold</th>' +
-        '<th>Total Cost</th>' +
-        '<th>Total Revenue</th>' +
-        '<th>Total Profit</th>' +
+        '<th onclick=sort("product") class="span4">Product</th>' +
+        '<th onclick=sort("units") class="span2">Units sold</th>' +
+        '<th class="span2">Total Cost</th>' +
+        '<th class="span2">Total Revenue</th>' +
+        '<th class="span2">Total Profit</th>' +
         '</tr>';
 
     for(cont = 0;cont < response.buy.length; cont++){
